@@ -124,7 +124,68 @@ for (int i = 1; i < arr.length; i++) {
 
 ---
 
-## 6. Multi-dimensional Arrays
+## 6. Two Pointer Technique
+
+The two-pointer technique is used to reduce time complexity in problems involving arrays or lists by maintaining two indices to process data efficiently.
+
+### Example: Move all zeros to the end
+
+```java
+int[] arr = {0, 1, 0, 3, 12};
+int j = 0;
+for (int i = 0; i < arr.length; i++) {
+    if (arr[i] != 0) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j++;
+    }
+}
+```
+
+### Example: Check if array has a pair with a given sum (sorted array)
+
+```java
+int[] arr = {1, 2, 4, 4};
+int target = 8;
+int left = 0, right = arr.length - 1;
+while (left < right) {
+    int sum = arr[left] + arr[right];
+    if (sum == target) {
+        System.out.println("Pair found");
+        break;
+    } else if (sum < target) {
+        left++;
+    } else {
+        right--;
+    }
+}
+```
+
+---
+
+## 7. Slow and Fast Pointer
+
+Used in scenarios like detecting cycles, middle of list/array, etc. Also called "Tortoise and Hare" method.
+
+### Example: Find if a cycle exists (Floyd's cycle detection, typically used with linked lists but concept applies)
+
+```java
+int slow = 0, fast = 0;
+boolean hasCycle = false;
+while (fast < arr.length && fast + 1 < arr.length) {
+    slow += 1;
+    fast += 2;
+    if (slow == fast) {
+        hasCycle = true;
+        break;
+    }
+}
+```
+
+---
+
+## 8. Multi-dimensional Arrays
 
 ### Declaration:
 
@@ -142,7 +203,7 @@ matrix[1][2] = 99;
 
 ---
 
-## 7. Arrays Utility Class
+## 9. Arrays Utility Class
 
 Java provides the `java.util.Arrays` class for utility operations.
 
@@ -159,14 +220,14 @@ System.out.println(Arrays.toString(arr)); // Print
 
 ---
 
-## 8. Limitations of Arrays
+## 10. Limitations of Arrays
 
 * Fixed size (use ArrayList for dynamic size)
 * Cannot store mixed types (e.g., int and String)
 
 ---
 
-## 9. When to Use Arrays
+## 11. When to Use Arrays
 
 * When you know the exact number of elements
 * When performance and memory predictability are key
@@ -174,7 +235,7 @@ System.out.println(Arrays.toString(arr)); // Print
 
 ---
 
-## 10. Summary
+## 12. Summary
 
 | Feature            | Array            |
 | ------------------ | ---------------- |
