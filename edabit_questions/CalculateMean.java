@@ -10,8 +10,7 @@ public class CalculateMean {
             sum += nums[i];
         }
 
-        double mean = (double) sum / len;
-        return mean;
+        return (double) sum / len;
     }
 
     public static void main(String[] args) {

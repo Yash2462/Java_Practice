@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class CurrencyConverter {
 
     static int rupeeToUsd(int rupee){
-        int usd =   rupee / (int)82.96;
 
-        return usd;
+        return rupee / (int)82.96;
     }
 
     public static void main(String[] args) {

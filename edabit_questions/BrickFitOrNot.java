@@ -12,11 +12,7 @@ public class BrickFitOrNot {
         // and second condition checks for height of brick less or equal to height of hole
         // or condition is same but with swapping width and height of hole
 
-        if (((b <=w  || c<=w) && a<=h) || ((b<=h || c <=h) && a<=w)){
-            return true;
-        }
-
-        return false;
+        return ((b <= w || c <= w) && a <= h) || ((b <= h || c <= h) && a <= w);
     }
 
     public static void main(String[] args) {

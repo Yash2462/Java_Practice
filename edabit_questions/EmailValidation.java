@@ -10,11 +10,7 @@ public class EmailValidation {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(s);
 
-        if (matcher.matches()){
-            return true;
-        }
-
-        return false;
+        return matcher.matches();
     }
 
     public static void main(String[] args) {

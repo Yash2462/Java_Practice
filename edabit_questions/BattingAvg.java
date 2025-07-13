@@ -6,7 +6,7 @@ public class BattingAvg {
 
     static double battingAvg(int matches, int runs){
 
-        return runs/matches;
+        return (double) runs /matches;
     }
 
     public static void main(String[] args) {
