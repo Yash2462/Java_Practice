@@ -12,20 +12,20 @@ public class MagicDate {
 
       switch (count){
 
-          case 1: if (multiplication == Integer.parseInt((year.substring(year.length()-1, year.length())))){
+          case 1: if (multiplication == Integer.parseInt((year.substring(year.length()-1)))){
               return true;
           }
           else {
               return false;
           }
-          case 2: if (multiplication == Integer.parseInt((year.substring(year.length()-2, year.length())))){
+          case 2: if (multiplication == Integer.parseInt((year.substring(year.length()-2)))){
               return true;
           }
           else {
               return false;
           }
 
-          case 3: if (multiplication == Integer.parseInt((year.substring(year.length()-3, year.length())))){
+          case 3: if (multiplication == Integer.parseInt((year.substring(year.length()-3)))){
               return true;
           }
           else {
