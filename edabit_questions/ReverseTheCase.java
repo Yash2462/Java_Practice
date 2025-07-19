@@ -2,23 +2,20 @@ package edabit_questions;
 
 public class ReverseTheCase {
     public static String reverseCase(String str) {
-       char[] ch =str.toCharArray();
-       String ans ="";
-        for (int i = 0; i <ch.length ; i++) {
+        char[] ch = str.toCharArray();
+        StringBuilder ans = new StringBuilder();
 
-            if (ch[i] >=65 && ch[i]<=90 ){
-                 ans = str.toLowerCase();
-
-//                str.replace(str.charAt(i) ,ans.charAt(i));
+        for (int i = 0; i < ch.length; i++) {
+            if (Character.isUpperCase(ch[i])) {
+                ans.append(Character.toLowerCase(ch[i]));
+            } else if (Character.isLowerCase(ch[i])) {
+                ans.append(Character.toUpperCase(ch[i]));
+            } else {
+                ans.append(ch[i]);  // non-alphabetic characters remain the same
             }
-            else {
-//                System.out.println("is in lowercase");
-                 ans = str.toUpperCase();
-//                str.replace(str.charAt(i) ,ans.charAt(i));
-            }
-
         }
-        return ans;
+
+        return ans.toString();
     }
 
     public static void main(String[] args) {
