@@ -1,8 +1,9 @@
 package stack;
 
 public class StackUsingArray {
-    int top,capacity;
-    int stack[];
+    private int top;
+    private final int capacity;
+    private final int[] stack;
 
     public StackUsingArray(int size){
         top = -1;

@@ -1,8 +1,8 @@
 package stack;
 
 public class DynamicStack {
-    int top,capacity;
-    int stack[];
+    private int top,capacity;
+    private int[] stack;
 
     public DynamicStack(int initialSize){
         top = -1;
