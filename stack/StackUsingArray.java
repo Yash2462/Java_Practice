@@ -1,5 +1,18 @@
 package stack;
 
+/**
+ * Stack is a linear data structure that follows the Last In First Out (LIFO) principle.
+ * The last element added to the stack will be the first one to be removed.
+ * Stack can be implemented using arrays or linked lists.
+ * In this implementation, we will use an array to create a stack.
+ * The stack will have a fixed capacity, and we will keep track of the top element using an index.
+ * The stack will support the following operations:
+ * 1. push(x): Add an element x to the top of the stack.
+ * 2. pop(): Remove and return the top element from the stack.
+ * 3. peek(): Return the top element without removing it from the stack.
+ * 4. isEmpty(): Check if the stack is empty.
+ * 5. isFull(): Check if the stack is full.
+ */
 public class StackUsingArray {
     private int top;
     private final int capacity;

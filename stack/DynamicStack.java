@@ -1,5 +1,14 @@
 package stack;
 
+/**
+ * DynamicStack is an implementation of a stack data structure that can grow in size dynamically.
+ * It uses an array to store the elements of the stack, and when the stack reaches its capacity, it doubles the size of the array to accommodate more elements.
+ * The stack supports the following operations:
+ * 1. push(x): Add an element x to the top of the stack.
+ * 2. pop(): Remove and return the top element from the stack.
+ * 3. peek(): Return the top element without removing it from the stack.
+ * 4. isEmpty(): Check if the stack is empty.
+ */
 public class DynamicStack {
     private int top,capacity;
     private int[] stack;
